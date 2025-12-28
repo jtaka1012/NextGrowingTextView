@@ -35,7 +35,12 @@ internal class NextGrowingInternalTextView: UITextView {
   override init(frame: CGRect, textContainer: NSTextContainer?) {
     super.init(frame: frame, textContainer: textContainer)
 
-    NotificationCenter.default.addObserver(self, selector: #selector(NextGrowingInternalTextView.textDidChangeNotification(_ :)), name: .UITextViewTextDidChange, object: self)
+    NotificationCenter.default.addObserver(
+      self,
+      selector: #selector(NextGrowingInternalTextView.textDidChangeNotification(_:)),
+      name: UITextView.textDidChangeNotification,
+      object: self
+    )
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -113,12 +118,12 @@ internal class NextGrowingInternalTextView: UITextView {
   }
 
   @objc
-  private dynamic func textDidChangeNotification(_ notification: Notification) {
+  private func textDidChangeNotification(_ notification: Notification) {
     updatePlaceholder()
     didChange()
   }
 
   private func updatePlaceholder() {
-    displayPlaceholder = text.isEmpty
+    displayPlaceholder = text?.isEmpty ?? true
   }
 }

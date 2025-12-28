@@ -229,7 +229,7 @@ open class NextGrowingTextView: UIScrollView {
   }
 
   private func scrollToBottom() {
-    guard !isAutomaticScrollToBottomEnabled else { return }
+    guard isAutomaticScrollToBottomEnabled else { return }
     contentOffset.y = contentSize.height - frame.height
   }
 

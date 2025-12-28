@@ -8,8 +8,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/muukii/NextGrowingTextView.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/muukii0803'
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '17.0'
   s.requires_arc = true
 
   s.source_files = 'NextGrowingTextView/**/*.swift'
+  s.swift_version = '5.9'
 end

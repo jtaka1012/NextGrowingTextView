@@ -1,6 +1,6 @@
 # NextGrowingTextView
 
-![](https://img.shields.io/badge/Swift-3.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/Swift-5.9-orange.svg?style=flat)
 [![CI Status](http://img.shields.io/travis/muukii/NextGrowingTextView.svg?style=flat)](https://travis-ci.org/muukii/NextGrowingTextView)
 [![Version](https://img.shields.io/cocoapods/v/NextGrowingTextView.svg?style=flat)](http://cocoapods.org/pods/NextGrowingTextView)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -50,7 +50,7 @@ growingTextView.delegates.didChangeHeight = { [weak self] height in
 
 ## Requirements
 
-iOS 8.0+ Swift 4
+iOS 17.0+ Swift 5.9
 
 ## Installation
 ### CocoaPods
@@ -97,6 +97,16 @@ github "muukii/NextGrowingTextView"
 ```
 
 Run `carthage update` to build the framework and drag the built `NextGrowingTextView.framework` into your Xcode project.
+
+### Swift Package Manager
+
+Add the repository URL in Xcode or to `Package.swift`:
+
+```swift
+.package(url: "https://github.com/muukii/NextGrowingTextView.git", from: "1.4.0")
+```
+
+and include `NextGrowingTextView` in your target dependencies.
 
 
 ## Author
