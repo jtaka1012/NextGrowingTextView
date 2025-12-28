@@ -103,7 +103,7 @@ Run `carthage update` to build the framework and drag the built `NextGrowingText
 Add the repository URL in Xcode or to `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/muukii/NextGrowingTextView.git", from: "1.4.0")
+.package(url: "https://github.com/muukii/NextGrowingTextView.git", from: "1.5.0")
 ```
 
 and include `NextGrowingTextView` in your target dependencies.
